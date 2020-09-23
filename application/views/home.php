@@ -1,11 +1,13 @@
-<h1> Welcome to Project: Shark </h1>
+<h2>Home Page</h2>
+
+
 
 <?php
-
-foreach($quiz as $row)
-{
-	$quizID = $row->quizID;
-	echo "<th>".$quizID."</th>";
-
-}
+//
+//foreach($quiz as $row)
+//{
+//	$quizID = $row->quizID;
+//	echo "<th>".$quizID."</th>";
+//
+//}
 ?>
