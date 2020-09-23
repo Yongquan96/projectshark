@@ -4,8 +4,8 @@
 
 foreach($quiz as $row)
 {
-	$busStop = $row->quizID;
-	echo "<th>".$busStop."</th>";
+	$quizID = $row->quizID;
+	echo "<th>".$quizID."</th>";
 
 }
 ?>
