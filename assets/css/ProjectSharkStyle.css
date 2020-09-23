@@ -1,0 +1,69 @@
+body,html{
+	height:100%;
+	width: 100%;
+}
+h1.header_logo{
+	position: absolute;
+	top:0px;
+	margin-left: auto;
+	margin-right: auto;
+	width:100%;
+	font-family: "Berlin Sans FB Demi";
+	color:grey;
+	/*-webkit-text-stroke: 2px black;*/
+	text-align: center;
+	z-index: 1;
+}
+.col.map{
+	position: absolute;
+	top:0px;
+	left: -15px;
+}
+.col.detail{
+	text-align: center;
+	position: absolute;
+	top:0px;
+	left: 50%;
+	width: 50%;
+}
+
+button.play_game{
+	position: relative;
+	font-family: "Berlin Sans FB Demi";
+	top:100px;
+	padding: 5px 15rem;
+	/*margin-top:80px;*/
+	/*padding: 0px 20%;*/
+	border-style: solid;
+	border-width: thick;
+	border-color: black;
+	border-radius: 10px;
+	font-size: 25px;
+	background-color: #5596cc;
+}
+button.play_game:hover{
+	background-color: #8bb3f8;
+}
+
+img.sharkbg{
+	width: 500px;
+	margin-top:35%;
+}
+
+#sharkmap{
+	width:50%;
+	height:100vh
+}
+
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+	display:none;
+}
+.gmnoprint div {
+	background:none !important;
+}
+.gm-style > div:nth-child(10){
+	display:none;
+}
