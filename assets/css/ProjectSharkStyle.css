@@ -18,7 +18,7 @@ h1.header_logo{
 	text-align: center;
 	z-index: 1;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1000px) {
 	.col.map{
 		position: absolute;
 		top:0px;
@@ -79,7 +79,7 @@ h1.header_logo{
 	/* style the items (options), including the selected item: */
 	.select-items div,.select-selected {
 		color: black;
-		padding: 8px 0px;
+		padding: 6px 0px;
 		border: 1px solid transparent;
 		/*border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;*/
 		cursor: pointer;
@@ -133,7 +133,7 @@ h1.header_logo{
 
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:1000px) {
 	.col.map{
 		display: none;
 	}
@@ -172,8 +172,7 @@ h1.header_logo{
 
 }
 
-
-button.play_game{
+a.play_game{
 	position: relative;
 	top:100px;
 	padding: 5px 25%;
@@ -182,15 +181,11 @@ button.play_game{
 	border-color: black;
 	border-radius: 10px;
 	background-color: #5596cc;
+	font-size: 25px;
 }
-button.play_game:hover{
+a.play_game:hover{
 	background-color: #8bb3f8;
 }
-
-
-
-
-
 
 a[href^="http://maps.google.com/maps"]{display:none !important}
 a[href^="https://maps.google.com/maps"]{display:none !important}

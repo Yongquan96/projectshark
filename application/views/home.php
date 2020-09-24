@@ -11,7 +11,7 @@
 		<!--Play Game, Dropdown box-->
 		<div class="col detail">
 			<!--Details-->
-			<button class="play_game">Play Game</button>
+			<a class="btn play_game" href="#">Play Game</a>
 
 			<div class="filter-group row">
 				<!--Dropdown for Filter-->
