@@ -133,6 +133,10 @@ h1.header_logo{
 	}
 	/*End of Shark Image*/
 
+	a.play_game{
+		font-size: 25px;
+	}
+
 }
 
 @media screen and (max-width:1000px) {
@@ -172,6 +176,11 @@ h1.header_logo{
 		height:100vh
 	}
 
+	a.play_game{
+		font-size: 45px;
+	}
+
+
 }
 
 a.play_game{
@@ -183,7 +192,6 @@ a.play_game{
 	border-color: black;
 	border-radius: 10px;
 	background-color: #5596cc;
-	font-size: 25px;
 }
 a.play_game:hover{
 	background-color: #8bb3f8;
