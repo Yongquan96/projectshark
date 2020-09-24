@@ -80,6 +80,7 @@ h1.header_logo{
 	.select-items div,.select-selected {
 		color: black;
 		padding: 6px 0px;
+		border-radius: 10px;
 		border: 1px solid transparent;
 		/*border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;*/
 		cursor: pointer;
@@ -89,6 +90,7 @@ h1.header_logo{
 	.select-items {
 		position: absolute;
 		background-color: #97c9e2;
+		border-radius: 10px;
 		top: 100%;
 		left: 0;
 		right: 0;
