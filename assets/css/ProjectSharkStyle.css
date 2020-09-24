@@ -2,6 +2,10 @@ body,html{
 	height:100%;
 	width: 100%;
 }
+@font-face {
+	src:url("../font/berlin-sans-fb-demi-bold.ttf");
+	font-family: "Berlin Sans FB Demi";
+}
 h1.header_logo{
 	position: absolute;
 	top:0px;
@@ -14,7 +18,7 @@ h1.header_logo{
 	text-align: center;
 	z-index: 1;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
 	.col.map{
 		position: absolute;
 		top:0px;
@@ -129,7 +133,7 @@ h1.header_logo{
 
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:600px) {
 	.col.map{
 		display: none;
 	}
