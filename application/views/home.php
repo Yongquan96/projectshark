@@ -7,15 +7,48 @@
 			<!--Google Map-->
 			<div id="sharkMap"></div>
 		</div>
+
+		<!--Play Game, Dropdown box-->
 		<div class="col detail">
 			<!--Details-->
 			<button class="play_game">Play Game</button>
 
-			<img class="sharkbg" src="assets/img/sharkMouth.png">
+			<div class="filter-group row">
+				<!--Dropdown for Filter-->
+				<div class="filter-select col">
+					<select>
+						<option>Area</option>
+						<option>Townsville</option>
+						<option>Cairns</option>
+					</select>
+
+				</div>
+				<div class="filter-select col">
+					<select>
+						<option>Month</option>
+						<option>January</option>
+						<option>February </option>
+					</select>
+
+				</div>
+
+				<div class="filter-select col">
+					<select>
+						<option>Species</option>
+						<option>Tiger Shark</option>
+						<option>Bull Whaler</option>
+					</select>
+
+				</div>
+			</div>
+
+
+			<div class="sharkbgContainer">
+				<img class="sharkbg" src="assets/img/sharkMouth.png">
+			</div>
 
 		</div>
 	</div>
-
 </div>
 
 <script src="assets/js/ProjectSharkMap.js" type="text/javascript"></script>
@@ -31,3 +64,5 @@
 //
 //}
 ?>
+<script src="assets/js/ProjectSharkFilterButtonStyle.js" type="text/javascript"></script>
+
