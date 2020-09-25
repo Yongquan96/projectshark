@@ -39,6 +39,7 @@ h1.header_logo{
 		margin: 0 50px;
 	}
 	div.filter-select {
+		font-size: 20px;
 		position: relative;
 		top:120px;
 		border-style: solid;
