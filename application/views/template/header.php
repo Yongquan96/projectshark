@@ -7,6 +7,9 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <!--Berlin Sans FB Demi-->
 <!--<link href="//db.onlinewebfonts.com/c/b6539b6d3432c623d8d4f9cc2a29589e?family=Berlin+Sans+FB+Demi" rel="stylesheet" type="text/css"/>-->
+<!--jquery-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
 
 <link href="assets/css/ProjectSharkStyle.css" rel="stylesheet" type="text/css"/>
 
