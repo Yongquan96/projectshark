@@ -11,11 +11,12 @@ function myMap() {
 	};
 
 	var map = new google.maps.Map(document.getElementById("sharkMap"),mapProp);
+
 	return map;
 }
 
 function sharkmarkers(map, long, lat, SpeciesName){
-	var sharkDemoImage ="";//"https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1149870280%2F0x0.jpg%3Ffit%3Dscale";
+	var sharkDemoImage = "https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1149870280%2F0x0.jpg%3Ffit%3Dscale";
 
 	var sharkSampleLocation = {
 		lat: lat,
@@ -39,11 +40,25 @@ function sharkmarkers(map, long, lat, SpeciesName){
 		content: contentInfo
 	});
 
-	google.maps.event.addListener(marker, 'click', function() {
-		infowindow.open(map,marker);
+	google.maps.event.addListener(marker, 'click', function(event) {
+		if(!marker.open){
+			infowindow.open(map,marker);
+			marker.open = true;
+
+			map.setCenter(marker.getPosition());
+		}
+		else {
+			infowindow.close();
+			marker.open = false;
+		}
 		//map.setZoom(10);
-		map.setCenter(marker.getPosition());
+		google.maps.event.addListener(map, "click", function(event) {
+			infowindow.close();
+		});
 	});
+
+
+
 }
 
 
@@ -52,6 +67,8 @@ function iterateRecords(data) {
 
 	// console.log(data);
 	var map = myMap();
+
+
 
 	$.each(data.result.records, function(recordKey, recordValue) {
 
@@ -63,27 +80,35 @@ function iterateRecords(data) {
 
 		if(Location && SpeciesName){
 			sharkmarkers(map, long, lat, SpeciesName);
-
-			//console.log(sharkmarkers(map, long, lat));
-			// $("#details").append(
-			// 	$('<section class="details">').append(
-			// 		$('<h2>').text(SpeciesName),
-			// 		$('<h3>').text(Location),
-			// 		$('<p>').text(Length+' meters long'),
-			// 		$('<p>').text(recordYear)
-			//
-			// 	)
-			// );
 		}
 
 	});
 
+
+
+
+}
+function areaForm() {
+	var area;
+	if(area !=""){
+		area = document.getElementById("area").value;
+		console.log(area);
+
+		ajaxMap(area);
+	}
 }
 
 $(document).ready(function() {
+	var filter ="";
+	ajaxMap(filter);
+});
 
+
+
+function ajaxMap(filter){
 	var data = {
-		resource_id: "a0c22786-3087-43ed-8975-882aeb3ba60c"
+		resource_id: "a0c22786-3087-43ed-8975-882aeb3ba60c",
+		q: filter//"TIGER SHARK"
 	}
 
 	$.ajax({
@@ -96,4 +121,4 @@ $(document).ready(function() {
 			iterateRecords(data);
 		}
 	});
-});
+}

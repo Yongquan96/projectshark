@@ -2,7 +2,7 @@
 
 <div class="container-fluid">
 
-	<div class="row">
+	<div class="row-fluid">
 		<div class="col map">
 			<!--Google Map-->
 			<div id="sharkMap"></div>
@@ -13,56 +13,61 @@
 			<!--Details-->
 			<a class="btn play_game" href="#">Play Game</a>
 
-			<div class="filter-group row">
-				<!--Dropdown for Filter-->
-				<div class="filter-select col">
-					<select>
-						<option>Area</option>
-						<option>Bribie Island</option>
-						<option>Bundaberg</option>
-						<option>Cairns</option>
-						<option>Capricorn Coast</option>
-						<option>Gladstone</option>
-						<option>Gold Coast</option>
-						<option>Mackay</option>
-						<option>Nth Stradbroke ls.</option>
-						<option>Rainbow Beach</option>
-						<option>Sunshine Coast North</option>
-						<option>Sunshine Coast South</option>
-						<option>Townsville</option>
+			<script>
 
-					</select>
+			</script>
 
+			<form name="filter-form" method="post" onclick="return areaForm()" action="home">
+				<div class="filter-group row">
+					<!--Dropdown for Filter-->
+					<div class="filter-select col">
+						<select id="area" name="arealist">
+							<option value="">Area</option>
+							<option value="">View All</option>
+							<option>Bribie Island</option>
+							<option>Bundaberg</option>
+							<option>Cairns</option>
+							<option>Capricorn Coast</option>
+							<option>Gladstone</option>
+							<option>Gold Coast</option>
+							<option>Mackay</option>
+							<option>Nth Stradbroke ls.</option>
+							<option>Rainbow Beach</option>
+							<option>Sunshine Coast North</option>
+							<option>Sunshine Coast South</option>
+							<option>Townsville</option>
+						</select>
+
+					</div>
+					<div class="filter-select col">
+						<select>
+							<option>Month</option>
+							<option>January</option>
+							<option>February</option>
+							<option>March</option>
+							<option>April</option>
+							<option>May</option>
+							<option>June</option>
+							<option>July</option>
+							<option>August</option>
+							<option>September</option>
+							<option>October</option>
+							<option>November</option>
+							<option>December</option>
+						</select>
+
+					</div>
+
+					<div class="filter-select col">
+						<select id="species" name="specieslist">
+							<option value="">Species</option>
+							<option>Tiger Shark</option>
+							<option>Bull Whaler</option>
+						</select>
+
+					</div>
 				</div>
-				<div class="filter-select col">
-					<select>
-						<option>Month</option>
-						<option>January</option>
-						<option>February</option>
-						<option>March</option>
-						<option>April</option>
-						<option>May</option>
-						<option>June</option>
-						<option>July</option>
-						<option>August</option>
-						<option>September</option>
-						<option>October</option>
-						<option>November</option>
-						<option>December</option>
-					</select>
-
-				</div>
-
-				<div class="filter-select col">
-					<select>
-						<option>Species</option>
-						<option>Tiger Shark</option>
-						<option>Bull Whaler</option>
-					</select>
-
-				</div>
-			</div>
-
+			</form>
 
 			<div class="sharkbgContainer">
 				<img class="sharkbg" src="assets/img/sharkMouth.png">
