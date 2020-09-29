@@ -17,7 +17,7 @@
 
 			</script>
 
-			<form name="filter-form" method="post" onclick="return areaForm()" action="home">
+			<form name="filter-form" method="post" onclick="return areaForm()">
 				<div class="filter-group row">
 					<!--Dropdown for Filter-->
 					<div class="filter-select col">
@@ -39,30 +39,31 @@
 						</select>
 
 					</div>
-					<div class="filter-select col">
-						<select>
-							<option>Month</option>
-							<option>January</option>
-							<option>February</option>
-							<option>March</option>
-							<option>April</option>
-							<option>May</option>
-							<option>June</option>
-							<option>July</option>
-							<option>August</option>
-							<option>September</option>
-							<option>October</option>
-							<option>November</option>
-							<option>December</option>
-						</select>
-
-					</div>
+<!--					<div class="filter-select col">-->
+<!--						<select>-->
+<!--							<option>Month</option>-->
+<!--							<option>January</option>-->
+<!--							<option>February</option>-->
+<!--							<option>March</option>-->
+<!--							<option>April</option>-->
+<!--							<option>May</option>-->
+<!--							<option>June</option>-->
+<!--							<option>July</option>-->
+<!--							<option>August</option>-->
+<!--							<option>September</option>-->
+<!--							<option>October</option>-->
+<!--							<option>November</option>-->
+<!--							<option>December</option>-->
+<!--						</select>-->
+<!---->
+<!--					</div>-->
 
 					<div class="filter-select col">
 						<select id="species" name="specieslist">
 							<option value="">Species</option>
-							<option>Tiger Shark</option>
-							<option>Bull Whaler</option>
+							<option value="">View All</option>
+							<option value="TIGER SHARK">Tiger Shark</option>
+							<option value="BULL WHALER">Bull Whaler</option>
 						</select>
 
 					</div>
