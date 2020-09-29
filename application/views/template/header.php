@@ -12,8 +12,9 @@
 
 
 <link href="assets/css/ProjectSharkStyle.css" rel="stylesheet" type="text/css"/>
+<link href="assets/css/ProjectSharkDetailStyle.css" rel="stylesheet" type="text/css"/>
 
-<h1 class="header_logo"> Welcome to Project: Shark </h1>
+<!--<h1 class="header_logo"> Welcome to Project: Shark </h1>-->
 
 <!--<a href="home" class="btn btn-link">Home</a>-->
 <!--<a href="shark_detail" class="btn btn-link">Detail</a>-->

@@ -40,7 +40,7 @@ function sharkmarkers(map, long, lat, SpeciesName){
 	var contentInfo = "<div style='font-family: Berlin Sans FB Demi;font-size: 20px;text-align: center;color: #6E8CA4'>"
 		+"<h4>"+SpeciesName+"</h4>"
 		+"<img style='width: 200px;border-radius: 15px' src='"+sharkDemoImage+"'>"
-		+"<br/><a style='text-decoration: underline;color:#97C0E2;' href='#'>Learn more</a>"
+		+"<br/><a style='text-decoration: underline;color:#97C0E2;' href='detail'>Learn more</a>"
 		+"</div>";
 
 	var infowindow = new google.maps.InfoWindow({
