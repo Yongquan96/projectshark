@@ -88,11 +88,8 @@ function iterateRecords(data) {
 		}
 
 	});
-
-
-
-
 }
+
 function areaForm() {
 	var species = document.getElementById("species").value;
 	var area = document.getElementById("area").value;
@@ -117,6 +114,7 @@ $(document).ready(function() {
 	var filter ="";
 	ajaxMap(filter);
 	ajaxMapSA("","");
+	ajaxSpeciesName();
 });
 
 
@@ -152,7 +150,49 @@ function ajaxMapSA(species,area){
 		success: function(data) {
 			//alert('Total results found: ' + data.result.total)
 			iterateRecords(data);
-			console.log(data);
+			//console.log(data);
 		}
+	});
+}
+
+
+function ajaxSpeciesName(){
+	var data = {
+		sql: "SELECT DISTINCT \"Species Name\" FROM \"a0c22786-3087-43ed-8975-882aeb3ba60c\" WHERE \"Species Name\" NOT IN ('','Total')"
+	}
+
+	$.ajax({
+		url: "https://www.data.qld.gov.au/api/3/action/datastore_search_sql",
+		data: data,
+		dataType: "jsonp", // We use "jsonp" to ensure AJAX works correctly locally (otherwise XSS).
+		cache: true,
+		success: function(data) {
+			//alert('Total results found: ' + data.result.total)
+			iterateSpeciesName(data);
+			//console.log(data);
+		}
+	});
+}
+
+function iterateSpeciesName(data){
+	var selectSpecies = document.getElementById("species");
+
+	$.each(data.result.records, function(recordKey, recordValue) {
+
+		var name = recordValue["Species Name"];
+
+		//console.log(name);
+		var option = document.createElement('option');
+		option.text = name;
+		selectSpecies.add(option);
+
+		// $("#records").append(
+		// 	$('<article class="record">').append(
+		// 		$('<h2>').text(recordTitle),
+		// 		$('<h3>').text(recordYear),
+		// 		$('<img>').attr("src", recordImage),
+		// 		$('<p>').text(recordDescription)
+		// 	)
+		// );
 	});
 }

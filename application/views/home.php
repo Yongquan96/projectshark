@@ -18,13 +18,12 @@
 
 			</script>
 
-			<form name="filter-form" method="post" onclick="return areaForm()">
+			<form name="filter-form">
 				<div class="filter-group row">
 					<!--Dropdown for Filter-->
-					<div class="filter-select col">
-						<select id="area" name="arealist">
-							<option value="">Area</option>
-							<option value="">View All</option>
+					<div class="col">
+						<select class="select-filter" id="area" name="arealist" onchange="areaForm()"  method="post">
+							<option value="">All Area</option>
 							<option>Bribie Island</option>
 							<option>Bundaberg</option>
 							<option>Cairns</option>
@@ -59,14 +58,13 @@
 <!---->
 <!--					</div>-->
 
-					<div class="filter-select col">
-						<select id="species" name="specieslist">
-							<option value="">Species</option>
-							<option value="">View All</option>
-							<option value="TIGER SHARK">Tiger Shark</option>
-							<option value="BULL WHALER">Bull Whaler</option>
+					<div class="col">
+						<select class="select-filter" id="species" name="specieslist" onchange="areaForm()" method="post">
+							<option value="">All Species</option>
+<!--							<option value="">View All</option>-->
+<!--							<option value="TIGER SHARK">Tiger Shark</option>-->
+<!--							<option value="BULL WHALER">Bull Whaler</option>-->
 						</select>
-
 					</div>
 				</div>
 			</form>
@@ -92,5 +90,5 @@
 //
 //}
 ?>
-<script src="assets/js/ProjectSharkFilterButtonStyle.js" type="text/javascript"></script>
+<!--<script src="assets/js/ProjectSharkFilterButtonStyle.js" type="text/javascript"></script>-->
 

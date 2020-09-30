@@ -19,6 +19,17 @@ h1.header_logo{
 	text-align: center;
 	z-index: 1;
 }
+
+select.select-filter{
+	position: relative;
+	top:110px;
+	border-style: solid;
+	border-width: thick;
+	border-color: black;
+	border-radius: 10px;
+	background-color: #97c9e2;
+}
+
 @media screen and (min-width: 1000px) {
 	.col.map{
 		position: absolute;
@@ -35,80 +46,20 @@ h1.header_logo{
 		width: 50%;
 	}
 
+	select.select-filter{
+		margin-right: 0px;
+		/*width: 10em;*/
+		padding: 10px 10%;
+		width: 100%;
+
+	}
+
 	/*Select dropdown Filter*/
 	div.filter-group{
 		margin: 0 50px;
-	}
-	div.filter-select {
-		font-size: 20px;
-		position: relative;
-		top:120px;
-		border-style: solid;
-		border-width: thick;
-		border-color: black;
-		border-radius: 10px;
-		color: black;
-		background-color: #97c9e2;
-		margin: 2px 8px;
+		left:50%;
 	}
 
-	.filter-select select {
-		display: none; /*hide original SELECT element: */
-	}
-
-	.select-selected {
-		background-color: #97c9e2;
-	}
-
-	/* Style the arrow inside the select element: */
-	.select-selected:after {
-		position: absolute;
-		content: "";
-		top: 14px;
-		right: 10px;
-		width: 0;
-		height: 0;
-		border: 6px solid transparent;
-		border-color: #fff transparent transparent transparent;
-	}
-
-	/* Point the arrow upwards when the select box is open (active): */
-	.select-selected.select-arrow-active:after {
-		border-color: transparent transparent #fff transparent;
-		top: 7px;
-	}
-
-	/* style the items (options), including the selected item: */
-	.select-items div,.select-selected {
-		color: black;
-		padding: 6px 0px;
-		border-radius: 10px;
-		border: 1px solid transparent;
-		/*border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;*/
-		cursor: pointer;
-	}
-
-	/* Style items (options): */
-	.select-items {
-		position: absolute;
-		background-color: #97c9e2;
-		border-radius: 10px;
-		top: 100%;
-		left: 0;
-		right: 0;
-		z-index: 99;
-	}
-
-	/* Hide the items when the select box is closed: */
-	.select-hide {
-		display: none;
-	}
-
-	.select-items div:hover, .same-as-selected {
-		background-color: rgba(0, 0, 0, 0.1);
-	}
-
-	/*End of select*/
 
 	/*Start of shark bottom image*/
 	div.sharkbgContainer{
@@ -160,8 +111,16 @@ h1.header_logo{
 		top:0px;
 	}
 	div.filter-group{
-		display: none;
+		/*display: none;*/
+		font-size: 25px;
 	}
+
+	select.select-filter{
+		margin-right: 0px;
+		width: 95%;
+		padding: 10px 10%;
+	}
+
 	div.sharkbgContainer{
 		position: fixed;
 		bottom: -4px;
@@ -211,6 +170,9 @@ a.play_game{
 a.play_game:hover{
 	background-color: #8bb3f8;
 }
+
+
+
 
 a[href^="http://maps.google.com/maps"]{display:none !important}
 a[href^="https://maps.google.com/maps"]{display:none !important}
