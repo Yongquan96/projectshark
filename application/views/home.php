@@ -12,7 +12,7 @@
 		<!--Play Game, Dropdown box-->
 		<div class="col detail">
 			<!--Details-->
-			<a class="btn play_game" href="#">Play Game</a>
+			<a class="btn play_game" href="game">Play Game</a>
 
 			<script>
 
@@ -82,11 +82,11 @@
 
 
 <?php
-//
-//foreach($quiz as $row)
+
+//foreach($sharkDetail as $row)
 //{
-//	$quizID = $row->quizID;
-//	echo "<th>".$quizID."</th>";
+//	$species = $row->species;
+//	echo "<th>".$species."</th>";
 //
 //}
 ?>

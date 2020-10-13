@@ -22,8 +22,8 @@ function mapProperties(zoom, lng, lat) {
 	return mapProp;
 }
 
-function sharkmarkers(map, long, lat, SpeciesName){
-	var sharkDemoImage = "";//https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1149870280%2F0x0.jpg%3Ffit%3Dscale";
+function sharkmarkers(map, long, lat, SpeciesName, id){
+	var sharkImage = "";//https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1149870280%2F0x0.jpg%3Ffit%3Dscale";
 
 	var sharkSampleLocation = {
 		lat: lat,
@@ -39,8 +39,8 @@ function sharkmarkers(map, long, lat, SpeciesName){
 
 	var contentInfo = "<div style='font-family: Berlin Sans FB Demi;font-size: 20px;text-align: center;color: #6E8CA4'>"
 		+"<h4>"+SpeciesName+"</h4>"
-		+"<img style='width: 200px;border-radius: 15px' src='"+sharkDemoImage+"'>"
-		+"<br/><a style='text-decoration: underline;color:#97C0E2;' href='detail'>Learn more</a>"
+		// +"<img style='width: 200px;border-radius: 15px' src='"+sharkImage+"'>"
+		+"<br/><a style='text-decoration: underline;color:#97C0E2;' href='detail?id="+id+"'>Learn more</a>"
 		+"</div>";
 
 	var infowindow = new google.maps.InfoWindow({
@@ -77,14 +77,17 @@ function iterateRecords(data) {
 
 	$.each(data.result.records, function(recordKey, recordValue) {
 
+		var id = recordValue["Species Code"];
 		var Location = recordValue["Location"];
 		var SpeciesName = recordValue["Species Name"];
 		//var Length = recordValue["Length (m)"]
 		var lat = Number(recordValue["Latitude"]);
 		var long = Number(recordValue["Longitude"]);
 
+		console.log(SpeciesName+' '+id);
+
 		if(Location && SpeciesName){
-			sharkmarkers(map, long, lat, SpeciesName);
+			sharkmarkers(map, long, lat, SpeciesName, id);
 		}
 
 	});
@@ -95,15 +98,15 @@ function areaForm() {
 	var area = document.getElementById("area").value;
 	if (area!="" && species == ""){
 		ajaxMap(area);
-		console.log(area);
+		//.log(area);
 	}
 	else if(species!="" && area==""){
 		ajaxMap(species);
-		console.log(species);
+		//console.log(species);
 	}
 	else if(species && area){
 		ajaxMapSA(species,area);
-		console.log("Both selected");
+		//console.log("Both selected");
 	}else{
 		ajaxMap("");
 	}
@@ -111,7 +114,7 @@ function areaForm() {
 }
 
 $(document).ready(function() {
-	var filter ="";
+	var filter = "";
 	ajaxMap(filter);
 	ajaxMapSA("","");
 	ajaxSpeciesName();
@@ -122,6 +125,7 @@ $(document).ready(function() {
 function ajaxMap(filter){
 	var data = {
 		resource_id: "a0c22786-3087-43ed-8975-882aeb3ba60c",
+		limit: 200,
 		q: filter//"TIGER SHARK"
 	}
 
@@ -131,8 +135,17 @@ function ajaxMap(filter){
 		dataType: "jsonp", // We use "jsonp" to ensure AJAX works correctly locally (otherwise XSS).
 		cache: true,
 		success: function(data) {
-			//alert('Total results found: ' + data.result.total)
-			iterateRecords(data);
+
+			// var allSharkLocation = JSON.parse(localStorage.getItem("AllSharkLocation"));
+			// if(allSharkLocation){
+			// 	iterateRecords(allSharkLocation);
+			// }
+			// else{
+				// localStorage.setItem("AllSharkLocation", JSON.stringify(data));
+				//alert('Total results found: ' + data.result.total)
+				iterateRecords(data);
+			// }
+
 		}
 	});
 }

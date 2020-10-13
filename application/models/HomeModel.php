@@ -7,7 +7,7 @@ class HomeModel extends CI_Model
 		parent::__construct();
 	}
 
-	function getQuiz() {
+//	function getQuiz() {
 //		$query=$this->db->query("SELECT * from quiz");
 //
 //		$results = array();
@@ -15,5 +15,6 @@ class HomeModel extends CI_Model
 //			$results[] = $result;
 //		}
 //		return $results;
-	}
+//	}
+
 }

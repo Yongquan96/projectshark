@@ -12,9 +12,10 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-//		$result['quiz']=$this->HomeModel->getQuiz();
+		$result[] = "";
+		//$result['sharkDetail']=$this->HomeModel->getSharkDetail();
 
-		$this->load->view('template/header');
+		$this->load->view('template/header',$result);
 		$this->load->view('home');
 	}
 }
