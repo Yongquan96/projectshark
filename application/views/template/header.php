@@ -8,6 +8,8 @@
 <!--Berlin Sans FB Demi-->
 <!--<link href="//db.onlinewebfonts.com/c/b6539b6d3432c623d8d4f9cc2a29589e?family=Berlin+Sans+FB+Demi" rel="stylesheet" type="text/css"/>-->
 <!--jquery-->
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 

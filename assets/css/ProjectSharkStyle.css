@@ -19,6 +19,29 @@ h1.header_logo{
 	text-align: center;
 	z-index: 1;
 }
+h2.header2logo{
+	font-family: "Berlin Sans FB Demi";
+	color:grey;
+	text-align: center;
+	height: 10%;
+	padding-top: 20px;
+}
+.subheader_logo.logo{
+	font-size: 30px;
+	color: grey;
+}
+.subheader_logo.subhead{
+	font-size: 20px;
+}
+.subheader_logo{
+	font-family: "Berlin Sans FB Demi";
+
+}
+.subheader_logo:hover{
+	color: #404040;
+	text-decoration: none;
+}
+
 
 select.select-filter{
 	position: relative;

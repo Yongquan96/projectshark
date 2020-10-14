@@ -19,6 +19,7 @@ class Detail extends CI_Controller {
 		$result['getSharkDetail'] = $this->DetailModel->getSharkDetailByID($id);
 
 		$this->load->view('template/header');
+		$this->load->view('template/subHeader');
 		$this->load->view('detail',$result);
 	}
 }

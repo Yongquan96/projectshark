@@ -26,4 +26,14 @@ class DetailModel extends CI_Model
 		}
 		return $results;
 	}
+
+	function getSearchResults($name){
+		$query= $this->db->query("SELECT species,id FROM sharkdetail WHERE species LIKE '%$name%'");
+
+		$results = array();
+		foreach ($query->result() as $result) {
+			$results[] = $result;
+		}
+		return $results;
+	}
 }
