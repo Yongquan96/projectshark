@@ -43,6 +43,6 @@ class AddShark extends CI_Controller {
 
 		$this->load->view('template/header');
 		$this->load->view('template/subHeaderAdmin');
-		$this->load->view('AddShark',$result);
+		$this->load->view('addShark',$result);
 	}
 }
