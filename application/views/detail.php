@@ -1,4 +1,15 @@
-<div class="container" style="height: 90%">
+<style>
+	div.container.info_detail{
+		height: 90%;
+		overflow-y: auto;
+
+	}
+	div.container.info_detail::-webkit-scrollbar {
+		display: none;
+	}
+</style>
+
+<div class="container info_detail">
 
 	<?php
 	foreach ($getSharkDetail as $row){ ?>
@@ -24,21 +35,21 @@
 			?>
 
 		</p>
-		<div id="readMoreButton">
+		<a href="<?php echo $row->contentUrl?>" id="readMoreButton">
 			<input type="button" class="btn btn-sm btn-secondary" id="readMore" value="Read More">
-		</div>
-		<p>
-			Sources:
-			<a href="<?php echo $row->contentUrl?>">
-				<?php echo $row->contentUrl?>
-			</a>
-		</p>
+		</a>
+<!--		<p>-->
+<!--			Sources:-->
+<!--			<a href="--><?php //echo $row->contentUrl?><!--">-->
+<!--				--><?php //echo $row->contentUrl?>
+<!--			</a>-->
+<!--		</p>-->
 	</div>
 
 </div>
 <hr/>
 <div style="height: 100%">
-	<h2 class="header2logo" style="height: 10%"><i class="fas fa-map-marker-alt"></i> Where <?php echo $row->species?> are located in Queensland</h2>
+	<h2 class="header2logo" style="height: 10%"><i class="fas fa-map-marker-alt"></i> <?php echo $row->species?> Location </h2>
 	<div id="sharkDetailMap" style="width: 100%;height: 90%"></div>
 
 </div>
