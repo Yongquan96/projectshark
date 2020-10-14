@@ -65,7 +65,7 @@
 
 		$("#delete").click(function () {
 			$.ajax({
-				url: "<?php echo base_url()?>AllShark/deleteSpecies",
+				url: "AllShark/deleteSpecies",
 				type: "POST",
 				cache: false,
 				data: {
