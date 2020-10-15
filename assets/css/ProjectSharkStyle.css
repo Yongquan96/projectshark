@@ -19,6 +19,29 @@ h1.header_logo{
 	text-align: center;
 	z-index: 1;
 }
+h2.header2logo{
+	font-family: "Berlin Sans FB Demi";
+	color:grey;
+	text-align: center;
+	height: 10%;
+	padding-top: 20px;
+}
+.subheader_logo.logo{
+	font-size: 30px;
+	color: grey;
+}
+.subheader_logo.subhead{
+	font-size: 20px;
+}
+.subheader_logo{
+	font-family: "Berlin Sans FB Demi";
+
+}
+.subheader_logo:hover{
+	color: #404040;
+	text-decoration: none;
+}
+
 
 select.select-filter{
 	position: relative;
@@ -94,7 +117,6 @@ select.select-filter{
 
 @media screen and (max-width:1000px) {
 	h1.header_logo{
-		font-size: 60px;
 		color: black;
 		/*background-color: #97c9e2;*/
 	}
@@ -112,19 +134,20 @@ select.select-filter{
 	}
 	div.filter-group{
 		/*display: none;*/
-		font-size: 25px;
+		margin: 0 30px;
+		font-size: 15px;
 	}
 
 	select.select-filter{
 		margin-right: 0px;
-		width: 95%;
-		padding: 10px 10%;
+		width: 100%;
+		padding: 10px 5%;
 	}
 
 	div.sharkbgContainer{
 		position: fixed;
-		bottom: -4px;
-		left: -2px;
+		/*bottom: -4px;*/
+		/*left: -2px;*/
 		width: 100%;
 		z-index: -1;
 	}
@@ -142,16 +165,15 @@ select.select-filter{
 
 	#sharkmap{
 		top:0;
-		right:20%;
+		right:15%;
 		width:125%;
 		/*height:60%;*/
-		 height:100vh
+		 height:100vh;
 	 }
 
 	a.play_game{
 		/*font-size: 45px;*/
 		/*display: none;*/
-		font-size: 3rem;
 	}
 
 

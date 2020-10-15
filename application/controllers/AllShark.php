@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Detail extends CI_Controller {
+class AllShark extends CI_Controller {
 
 	public function __construct()
 	{
@@ -12,14 +12,18 @@ class Detail extends CI_Controller {
 
 	public function index()
 	{
-		$id = (int)$_GET["id"];
-		//$id = 37013900; //sample shark id
-
 		$result['allSharkDetail']=$this->DetailModel->getAllSharkDetail();
-		$result['getSharkDetail'] = $this->DetailModel->getSharkDetailByID($id);
 
 		$this->load->view('template/header');
-		$this->load->view('template/subHeader');
-		$this->load->view('detail',$result);
+		$this->load->view('template/subHeaderAdmin');
+		$this->load->view('allShark',$result);
+	}
+
+	public function deleteSpecies(){
+
+		$id=$this->input->post('id');
+		//echo $id;
+		$this->DetailModel->deleteSharkDetails($id);
+
 	}
 }
