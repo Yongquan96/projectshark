@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Game extends CI_Controller {
+class Game2 extends CI_Controller {
 
 	public function __construct()
 	{
@@ -13,6 +13,6 @@ class Game extends CI_Controller {
 		$this->load->view('template/header');
 		$this->load->view('template/subHeader');
 		$this->load->view('template/gameMenu');
-		$this->load->view('game');
+		$this->load->view('game2');
 	}
 }
